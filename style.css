@@ -450,7 +450,6 @@ overflow: hidden;
 transform: all 10s linear;
 cursor: pointer;
 position: relative;
-background: blue;
 }
 .items > img{
   width: 100%;
@@ -514,6 +513,12 @@ display: none;
 @media (min-width:1201px){
 .product-container{
   grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+}
+}
+@media (max-width:500px){
+.product-container{
+  grid-template-columns:  1fr 1fr; 
+  gap: 10px;
 }
 }
 

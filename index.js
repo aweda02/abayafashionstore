@@ -300,6 +300,15 @@ function itemFunctionality() {
         item.querySelector(".cartto-container").classList.remove("hover-effect");
       });
     });
+    document.querySelectorAll(".items").forEach(item => {
+      item.addEventListener("touchstart", () => {
+        item.querySelector(".cartto-container").classList.add("hover-effect");
+      });
+
+      item.addEventListener("touchend", () => {
+        item.querySelector(".cartto-container").classList.remove("hover-effect");
+      });
+    });
 
     let cartto = [...document.querySelectorAll(".cartto-container")];
     let carttoDom = cartto;
