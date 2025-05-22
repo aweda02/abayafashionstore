@@ -259,7 +259,7 @@ function displayMenu(menuItems) {
     <div class="items-container">
       <div class="items">
         <img src="${item.img}" alt="product image">
-        <div class="cartto-container" data-id="${item.id}">
+        <div class="cartto-container .hover-effect" data-id="${item.id}">
           Add to cart <img src="./images/shopping_cart_checkout_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="">
         </div>
       </div>
@@ -291,24 +291,17 @@ function itemFunctionality() {
       item.classList.toggle("black-friday", today.getDay() === 5);
     });
 
+  
     document.querySelectorAll(".items").forEach(item => {
       item.addEventListener("mouseover", () => {
         item.querySelector(".cartto-container").classList.add("hover-effect");
       });
-
       item.addEventListener("mouseout", () => {
         item.querySelector(".cartto-container").classList.remove("hover-effect");
       });
-    });
-    document.querySelectorAll(".items").forEach(item => {
-      item.addEventListener("touchstart", () => {
-        item.querySelector(".cartto-container").classList.add("hover-effect");
-      });
-
-      item.addEventListener("touchend", () => {
-        item.querySelector(".cartto-container").classList.remove("hover-effect");
-      });
-    });
+    })
+      
+    
 
     let cartto = [...document.querySelectorAll(".cartto-container")];
     let carttoDom = cartto;
@@ -522,7 +515,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.querySelector('.buy-stock').addEventListener('click', () => {
-  let phoneNumber = "2348025322323"; // Replace with your WhatsApp number
+  let phoneNumber = "2347081343780"; // Replace with your WhatsApp number
   let cartMessage = "🛍 Cart Summary:\n\n";
 
   cart.forEach(item => {
